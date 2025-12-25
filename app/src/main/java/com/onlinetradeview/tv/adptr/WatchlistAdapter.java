@@ -1,5 +1,7 @@
 package com.onlinetradeview.tv.adptr;
 
+import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,19 +10,22 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.onlinetradeview.tv.cmonulty.GlobalVariables;
+
 import java.util.List;
 
 public class WatchlistAdapter extends RecyclerView.Adapter<WatchlistAdapter.VH> {
     public interface Callback { void onItemClick(int position, int id); }
-
     private final List<String> data;
     private final int baseId;
     private final Callback cb;
+    public static Context ctx;
 
-    public WatchlistAdapter(List<String> data, int baseId, Callback cb) {
+    public WatchlistAdapter(List<String> data, int baseId, Callback cb, Context ctx) {
         this.data = data;
         this.baseId = baseId;
         this.cb = cb;
+        this.ctx = ctx;
     }
 
     @NonNull
@@ -48,6 +53,8 @@ public class WatchlistAdapter extends RecyclerView.Adapter<WatchlistAdapter.VH> 
         VH(@NonNull View itemView) {
             super(itemView);
             tv = (TextView) itemView;
+            Typeface font = Typeface.createFromAsset(ctx.getAssets(), GlobalVariables.CUSTOMFONTNAME);
+            tv.setTypeface(font);
         }
     }
 }

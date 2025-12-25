@@ -2,6 +2,7 @@ package com.onlinetradeview.tv.adptr;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.onlinetradeview.tv.R;
+import com.onlinetradeview.tv.cmonulty.customfont.FontUtils;
 import com.onlinetradeview.tv.mdel.WalletHistoryModel;
 import com.onlinetradeview.tv.cmonulty.GlobalVariables;
 import com.onlinetradeview.tv.cmonulty.recyclerview.ItemAnimation;
@@ -44,7 +46,7 @@ public class WalletHistoryAdapter extends RecyclerView.Adapter<RecyclerView.View
     public class OriginalViewHolder extends RecyclerView.ViewHolder {
         public TextView username, amountRecharge, recharegDate, desc, afterPoint, beforePoint;
         public CardView cardView;
-        public View lyt_parent;
+        public ViewGroup lyt_parent;
 
         public OriginalViewHolder(View v) {
             super(v);
@@ -56,7 +58,11 @@ public class WalletHistoryAdapter extends RecyclerView.Adapter<RecyclerView.View
             beforePoint = (TextView) v.findViewById(R.id.beforepoint);
 
             cardView = (CardView) v.findViewById(R.id.cardview);
-            lyt_parent = (View) v.findViewById(R.id.lyt_parent);
+            lyt_parent = v.findViewById(R.id.lyt_parent);
+            if (!GlobalVariables.CUSTOMFONTNAME.equals("")) {
+                Typeface font = Typeface.createFromAsset(ctx.getAssets(), GlobalVariables.CUSTOMFONTNAME);
+                FontUtils.setThemeColor(lyt_parent, ctx, font);
+            }
         }
     }
 

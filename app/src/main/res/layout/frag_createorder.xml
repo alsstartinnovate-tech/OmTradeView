@@ -45,7 +45,7 @@
                         <TextView
                             android:id="@+id/tvname"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="0dp"
                             android:layout_marginTop="@dimen/twelve"
                             android:layout_weight="1.5"
                             android:text="Select Option"
@@ -251,7 +251,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginStart="@dimen/fifteen"
                     android:text="Last Price History"
                     android:textColor="@color/white"
                     android:textSize="@dimen/ts_seventeen"

@@ -104,6 +104,7 @@
     <color name="red_A700">#D50000</color>
 
     <color name="green_default">#00be00</color>
+    <color name="green_200">#66BB6A</color>
     <color name="green_400">#66BB6A</color>
     <color name="green_500">#4CAF50</color>
     <color name="green_800">#2E7D32</color>

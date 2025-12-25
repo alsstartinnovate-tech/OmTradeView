@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.onlinetradeview.tv.R;
 import com.onlinetradeview.tv.cmonulty.GlobalVariables;
+import com.onlinetradeview.tv.cmonulty.customfont.FontUtils;
 import com.onlinetradeview.tv.cmonulty.recyclerview.ItemAnimation;
 import com.onlinetradeview.tv.mdel.NotificationModel;
 
@@ -53,7 +54,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             lyt_parent = v.findViewById(R.id.lyt_parent);
             if (!GlobalVariables.CUSTOMFONTNAME.equals("")) {
                 Typeface font = Typeface.createFromAsset(ctx.getAssets(), GlobalVariables.CUSTOMFONTNAME);
-//                FontUtils.setThemeColor(lyt_parent, ctx, font);
+                FontUtils.setThemeColor(lyt_parent, ctx, font);
             }
         }
     }

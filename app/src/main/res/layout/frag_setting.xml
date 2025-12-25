@@ -3,11 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mylayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/appbackcolor">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -30,38 +32,35 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginStart="@dimen/fifteen"
-                        android:layout_marginTop="@dimen/fifteen"
-                        android:layout_marginEnd="@dimen/fifteen"
-                        android:layout_marginBottom="@dimen/fifteen"
-                        app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="24dp"
-                        app:cardElevation="16dp"
-                        app:strokeWidth="3dp"
-                        app:strokeColor="@color/teal_primary">
+                        android:layout_margin="@dimen/five"
+                        android:layout_marginTop="@dimen/seven"
+                        app:cardBackgroundColor="@color/c_white"
+                        app:cardCornerRadius="@dimen/ten"
+                        app:cardElevation="0dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/fifty"
                             android:orientation="vertical"
                             android:paddingTop="@dimen/spacing_middle"
                             android:paddingBottom="@dimen/spacing_middle">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="@dimen/onehundredfifty"
+                                android:layout_width="@dimen/twohundred"
+                                android:layout_height="@dimen/hundred"
+                                android:layout_centerInParent="true"
                                 android:layout_gravity="center_horizontal"
                                 android:background="@drawable/logo_back" />
 
                             <TextView
                                 android:id="@+id/username"
                                 android:layout_width="wrap_content"
-                                android:layout_gravity="center_horizontal"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/eight"
-                                android:textColor="@color/teal_primary"
-                                android:textSize="@dimen/ts_eighteen"
-                                android:textStyle="bold" />
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/two"
+                                android:textColor="@color/buttoncolor"
+                                android:textSize="@dimen/ts_fifteen" />
 
                             <TextView
                                 android:id="@+id/userId"
@@ -69,49 +68,52 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_marginTop="@dimen/four"
-                                android:textColor="@color/teal_primary_light"
+                                android:textColor="@color/buttoncolor"
                                 android:textSize="@dimen/ts_fifteen" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_large"
+                        android:layout_marginTop="@dimen/two"
+                        android:layout_marginBottom="@dimen/spacing_middle"
+                        android:text="Change your profile, add fund to your wallet and see the detail about application"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ts_fifteen"
+                        android:visibility="gone" />
 
                     <LinearLayout
                         android:id="@+id/lay_marquee"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:focusable="true"
-                        android:focusableInTouchMode="true">
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/marqueeText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:background="#000000"
                             android:ellipsize="marquee"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
                             android:gravity="start"
                             android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
                             android:singleLine="true"
-                            android:background="@drawable/gradient_actionbar"
-                            android:textSize="@dimen/ts_eighteen"
-                            android:textColor="@color/white"
-                            android:padding="@dimen/seven"
-                            android:layout_marginStart="@dimen/fifteen"
-                            android:layout_marginEnd="@dimen/fifteen"
-                            android:layout_marginTop="@dimen/one"
-                            android:layout_marginBottom="@dimen/two"
-                            android:elevation="4dp"
-                            android:focusable="true"
-                            android:focusableInTouchMode="true" />
+                            android:textColor="@color/buttoncolor"
+                            android:textSize="18sp" />
                     </LinearLayout>
 
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/fifteen"
-                        android:layout_marginEnd="@dimen/fifteen"
-                        android:layout_marginBottom="@dimen/ten"
                         android:visibility="visible"
-                        app:cardBackgroundColor="@color/white"
+                        app:cardBackgroundColor="@color/transparent"
                         app:cardCornerRadius="0dp"
                         app:cardElevation="0dp">
 
@@ -126,18 +128,11 @@
                                 android:id="@+id/lay_addfund"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/setting_menu_item_background"
                                 android:gravity="center_vertical"
                                 android:minHeight="@dimen/spacing_xxlarge"
                                 android:orientation="horizontal"
-                                android:paddingLeft="@dimen/fifteen"
-                                android:paddingTop="@dimen/twelve"
-                                android:paddingRight="@dimen/fifteen"
-                                android:paddingBottom="@dimen/twelve"
-                                android:layout_marginTop="@dimen/four"
-                                android:layout_marginBottom="@dimen/four"
-                                android:clickable="true"
-                                android:focusable="true"
+                                android:paddingLeft="@dimen/spacing_medium"
+                                android:paddingRight="@dimen/spacing_medium"
                                 android:visibility="gone">
 
                                 <View
@@ -156,17 +151,15 @@
                                         android:layout_weight="1"
                                         android:text="Add Fund"
                                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                        android:textColor="@color/teal_primary"
-                                        android:textStyle="bold"
-                                        android:textSize="@dimen/ts_seventeen" />
+                                        android:textColor="@color/white" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:text="Add Money to your account"
-                                        android:textColor="@color/slate_600"
-                                        android:textSize="@dimen/ts_thirteen" />
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/ts_twelve" />
                                 </LinearLayout>
 
                                 <View
@@ -178,7 +171,7 @@
                                     android:layout_height="@dimen/spacing_xmlarge"
                                     android:background="@android:color/transparent"
                                     app:srcCompat="@drawable/ic_arrow_right"
-                                    app:tint="@color/teal_primary" />
+                                    app:tint="@color/white" />
 
                             </LinearLayout>
 
@@ -186,17 +179,12 @@
                                 android:id="@+id/lay_wallethistory"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/setting_menu_item_background"
+                                android:background="@color/grey_5"
                                 android:gravity="center_vertical"
                                 android:minHeight="@dimen/spacing_xxlarge"
                                 android:orientation="horizontal"
-                                android:paddingLeft="@dimen/fifteen"
-                                android:paddingTop="@dimen/seven"
-                                android:paddingRight="@dimen/fifteen"
-                                android:paddingBottom="@dimen/twelve"
-                                android:layout_marginBottom="@dimen/four"
-                                android:clickable="true"
-                                android:focusable="true">
+                                android:paddingLeft="@dimen/spacing_medium"
+                                android:paddingRight="@dimen/spacing_medium">
 
                                 <View
                                     android:layout_width="@dimen/twenty"
@@ -214,17 +202,15 @@
                                         android:layout_weight="1"
                                         android:text="Wallet"
                                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                        android:textColor="@color/teal_primary"
-                                        android:textStyle="bold"
-                                        android:textSize="@dimen/ts_seventeen" />
+                                        android:textColor="@color/black" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:text="See amount add and deduct from your wallet "
-                                        android:textColor="@color/slate_600"
-                                        android:textSize="@dimen/ts_thirteen" />
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/ts_twelve" />
                                 </LinearLayout>
 
                                 <View
@@ -236,26 +222,25 @@
                                     android:layout_height="@dimen/spacing_xmlarge"
                                     android:background="@android:color/transparent"
                                     app:srcCompat="@drawable/ic_arrow_right"
-                                    app:tint="@color/teal_primary" />
+                                    app:tint="@color/black" />
 
                             </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/one"
+                                android:background="@color/transparent" />
 
                             <LinearLayout
                                 android:id="@+id/lay_profile"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/setting_menu_item_background"
+                                android:background="@color/grey_5"
                                 android:gravity="center_vertical"
                                 android:minHeight="@dimen/spacing_xxlarge"
                                 android:orientation="horizontal"
-                                android:paddingLeft="@dimen/fifteen"
-                                android:paddingTop="@dimen/twelve"
-                                android:paddingRight="@dimen/fifteen"
-                                android:paddingBottom="@dimen/twelve"
-                                android:layout_marginTop="@dimen/four"
-                                android:layout_marginBottom="@dimen/four"
-                                android:clickable="true"
-                                android:focusable="true">
+                                android:paddingLeft="@dimen/spacing_medium"
+                                android:paddingRight="@dimen/spacing_medium">
 
                                 <View
                                     android:layout_width="@dimen/twenty"
@@ -273,17 +258,15 @@
                                         android:layout_weight="1"
                                         android:text="Profile"
                                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                        android:textColor="@color/teal_primary"
-                                        android:textStyle="bold"
-                                        android:textSize="@dimen/ts_seventeen" />
+                                        android:textColor="@color/black" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:text="See/Edit your profile detail"
-                                        android:textColor="@color/slate_600"
-                                        android:textSize="@dimen/ts_thirteen" />
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/ts_twelve" />
                                 </LinearLayout>
 
 
@@ -296,26 +279,24 @@
                                     android:layout_height="@dimen/spacing_xmlarge"
                                     android:background="@android:color/transparent"
                                     app:srcCompat="@drawable/ic_arrow_right"
-                                    app:tint="@color/teal_primary" />
+                                    app:tint="@color/black" />
 
                             </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/one" />
 
                             <LinearLayout
                                 android:id="@+id/lay_profile_two"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/setting_menu_item_background"
+                                android:background="@color/grey_5"
                                 android:gravity="center_vertical"
                                 android:minHeight="@dimen/spacing_xxlarge"
                                 android:orientation="horizontal"
-                                android:paddingLeft="@dimen/fifteen"
-                                android:paddingTop="@dimen/twelve"
-                                android:paddingRight="@dimen/fifteen"
-                                android:paddingBottom="@dimen/twelve"
-                                android:layout_marginTop="@dimen/four"
-                                android:layout_marginBottom="@dimen/four"
-                                android:clickable="true"
-                                android:focusable="true">
+                                android:paddingLeft="@dimen/spacing_medium"
+                                android:paddingRight="@dimen/spacing_medium">
 
                                 <View
                                     android:layout_width="@dimen/twenty"
@@ -333,17 +314,15 @@
                                         android:layout_weight="1"
                                         android:text="Profile"
                                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                        android:textColor="@color/teal_primary"
-                                        android:textStyle="bold"
-                                        android:textSize="@dimen/ts_seventeen" />
+                                        android:textColor="@color/black" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:text="See/Edit your profile detail"
-                                        android:textColor="@color/slate_600"
-                                        android:textSize="@dimen/ts_thirteen" />
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/ts_twelve" />
                                 </LinearLayout>
 
 
@@ -356,26 +335,24 @@
                                     android:layout_height="@dimen/spacing_xmlarge"
                                     android:background="@android:color/transparent"
                                     app:srcCompat="@drawable/ic_arrow_right"
-                                    app:tint="@color/teal_primary" />
+                                    app:tint="@color/black" />
 
                             </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/one" />
 
                             <LinearLayout
                                 android:id="@+id/lay_changepwd"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/setting_menu_item_background"
+                                android:background="@color/grey_5"
                                 android:gravity="center_vertical"
                                 android:minHeight="@dimen/spacing_xxlarge"
                                 android:orientation="horizontal"
-                                android:paddingLeft="@dimen/fifteen"
-                                android:paddingTop="@dimen/twelve"
-                                android:paddingRight="@dimen/fifteen"
-                                android:paddingBottom="@dimen/twelve"
-                                android:layout_marginTop="@dimen/four"
-                                android:layout_marginBottom="@dimen/four"
-                                android:clickable="true"
-                                android:focusable="true">
+                                android:paddingLeft="@dimen/spacing_medium"
+                                android:paddingRight="@dimen/spacing_medium">
 
                                 <View
                                     android:layout_width="@dimen/twenty"
@@ -393,17 +370,15 @@
                                         android:layout_weight="1"
                                         android:text="Change Password"
                                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                        android:textColor="@color/teal_primary"
-                                        android:textStyle="bold"
-                                        android:textSize="@dimen/ts_seventeen" />
+                                        android:textColor="@color/black" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:text="Change password of your account"
-                                        android:textColor="@color/slate_600"
-                                        android:textSize="@dimen/ts_thirteen" />
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/ts_twelve" />
                                 </LinearLayout>
 
                                 <View
@@ -415,26 +390,24 @@
                                     android:layout_height="@dimen/spacing_xmlarge"
                                     android:background="@android:color/transparent"
                                     app:srcCompat="@drawable/ic_arrow_right"
-                                    app:tint="@color/teal_primary" />
+                                    app:tint="@color/black" />
 
                             </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/one" />
 
                             <LinearLayout
                                 android:id="@+id/lay_notification"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/setting_menu_item_background"
+                                android:background="@color/grey_5"
                                 android:gravity="center_vertical"
                                 android:minHeight="@dimen/spacing_xxlarge"
                                 android:orientation="horizontal"
-                                android:paddingLeft="@dimen/fifteen"
-                                android:paddingTop="@dimen/twelve"
-                                android:paddingRight="@dimen/fifteen"
-                                android:paddingBottom="@dimen/twelve"
-                                android:layout_marginTop="@dimen/four"
-                                android:layout_marginBottom="@dimen/four"
-                                android:clickable="true"
-                                android:focusable="true">
+                                android:paddingLeft="@dimen/spacing_medium"
+                                android:paddingRight="@dimen/spacing_medium">
 
                                 <View
                                     android:layout_width="@dimen/twenty"
@@ -452,17 +425,15 @@
                                         android:layout_weight="1"
                                         android:text="Notification"
                                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                        android:textColor="@color/teal_primary"
-                                        android:textStyle="bold"
-                                        android:textSize="@dimen/ts_seventeen" />
+                                        android:textColor="@color/black" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:text="See important notification history"
-                                        android:textColor="@color/slate_600"
-                                        android:textSize="@dimen/ts_thirteen" />
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/ts_twelve" />
                                 </LinearLayout>
 
                                 <View
@@ -474,26 +445,25 @@
                                     android:layout_height="@dimen/spacing_xmlarge"
                                     android:background="@android:color/transparent"
                                     app:srcCompat="@drawable/ic_arrow_right"
-                                    app:tint="@color/teal_primary" />
+                                    app:tint="@color/black" />
 
                             </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/one"
+                                android:background="@color/transparent" />
 
                             <LinearLayout
                                 android:id="@+id/lay_sharerate"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/setting_menu_item_background"
+                                android:background="@color/grey_5"
                                 android:gravity="center_vertical"
                                 android:minHeight="@dimen/spacing_xxlarge"
                                 android:orientation="horizontal"
-                                android:paddingLeft="@dimen/fifteen"
-                                android:paddingTop="@dimen/twelve"
-                                android:paddingRight="@dimen/fifteen"
-                                android:paddingBottom="@dimen/twelve"
-                                android:layout_marginTop="@dimen/four"
-                                android:layout_marginBottom="@dimen/four"
-                                android:clickable="true"
-                                android:focusable="true"
+                                android:paddingLeft="@dimen/spacing_medium"
+                                android:paddingRight="@dimen/spacing_medium"
                                 android:visibility="gone">
 
                                 <View
@@ -512,17 +482,15 @@
                                         android:layout_weight="1"
                                         android:text="Share &amp; Rate"
                                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                        android:textColor="@color/teal_primary"
-                                        android:textStyle="bold"
-                                        android:textSize="@dimen/ts_seventeen" />
+                                        android:textColor="@color/black" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:text="Share application to your friends and family"
-                                        android:textColor="@color/slate_600"
-                                        android:textSize="@dimen/ts_thirteen" />
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/ts_twelve" />
                                 </LinearLayout>
 
                                 <View
@@ -534,7 +502,7 @@
                                     android:layout_height="@dimen/spacing_xmlarge"
                                     android:background="@android:color/transparent"
                                     app:srcCompat="@drawable/ic_arrow_right"
-                                    app:tint="@color/teal_primary" />
+                                    app:tint="@color/black" />
 
                             </LinearLayout>
 
@@ -542,18 +510,12 @@
                                 android:id="@+id/lay_about"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/setting_menu_item_background"
+                                android:background="@color/grey_5"
                                 android:gravity="center_vertical"
                                 android:minHeight="@dimen/spacing_xxlarge"
                                 android:orientation="horizontal"
-                                android:paddingLeft="@dimen/fifteen"
-                                android:paddingTop="@dimen/twelve"
-                                android:paddingRight="@dimen/fifteen"
-                                android:paddingBottom="@dimen/twelve"
-                                android:layout_marginTop="@dimen/four"
-                                android:layout_marginBottom="@dimen/four"
-                                android:clickable="true"
-                                android:focusable="true">
+                                android:paddingLeft="@dimen/spacing_medium"
+                                android:paddingRight="@dimen/spacing_medium">
 
                                 <View
                                     android:layout_width="@dimen/twenty"
@@ -571,17 +533,15 @@
                                         android:layout_weight="1"
                                         android:text="Privacy Policy"
                                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                        android:textColor="@color/teal_primary"
-                                        android:textStyle="bold"
-                                        android:textSize="@dimen/ts_seventeen" />
+                                        android:textColor="@color/black" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:text="Know our privacy policy"
-                                        android:textColor="@color/slate_600"
-                                        android:textSize="@dimen/ts_thirteen" />
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/ts_twelve" />
                                 </LinearLayout>
 
                                 <View
@@ -593,26 +553,24 @@
                                     android:layout_height="@dimen/spacing_xmlarge"
                                     android:background="@android:color/transparent"
                                     app:srcCompat="@drawable/ic_arrow_right"
-                                    app:tint="@color/teal_primary" />
+                                    app:tint="@color/black" />
 
                             </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/one" />
 
                             <LinearLayout
                                 android:id="@+id/lay_logout"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/setting_menu_item_background"
+                                android:background="@color/grey_5"
                                 android:gravity="center_vertical"
                                 android:minHeight="@dimen/spacing_xxlarge"
                                 android:orientation="horizontal"
-                                android:paddingLeft="@dimen/fifteen"
-                                android:paddingTop="@dimen/twelve"
-                                android:paddingRight="@dimen/fifteen"
-                                android:paddingBottom="@dimen/twelve"
-                                android:layout_marginTop="@dimen/four"
-                                android:layout_marginBottom="@dimen/four"
-                                android:clickable="true"
-                                android:focusable="true">
+                                android:paddingLeft="@dimen/spacing_medium"
+                                android:paddingRight="@dimen/spacing_medium">
 
                                 <View
                                     android:layout_width="@dimen/twenty"
@@ -630,17 +588,15 @@
                                         android:layout_weight="1"
                                         android:text="Logout"
                                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                        android:textColor="@color/red_default"
-                                        android:textStyle="bold"
-                                        android:textSize="@dimen/ts_seventeen" />
+                                        android:textColor="@color/red_900" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:text="Logout your account"
-                                        android:textColor="@color/slate_600"
-                                        android:textSize="@dimen/ts_thirteen" />
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/ts_twelve" />
                                 </LinearLayout>
 
                                 <View
@@ -652,7 +608,7 @@
                                     android:layout_height="@dimen/spacing_xmlarge"
                                     android:background="@android:color/transparent"
                                     app:srcCompat="@drawable/ic_arrow_right"
-                                    app:tint="@color/teal_primary" />
+                                    app:tint="@color/black" />
 
                             </LinearLayout>
 

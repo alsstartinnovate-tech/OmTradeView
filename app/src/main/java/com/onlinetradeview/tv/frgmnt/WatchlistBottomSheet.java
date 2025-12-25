@@ -2,6 +2,7 @@ package com.onlinetradeview.tv.frgmnt;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.onlinetradeview.tv.adptr.WatchlistAdapter;
+import com.onlinetradeview.tv.cmonulty.GlobalVariables;
 
 import java.util.Arrays;
 import java.util.List;
@@ -65,6 +67,8 @@ public class WatchlistBottomSheet extends BottomSheetDialogFragment {
 
         TextView header = new TextView(ctx);
         header.setText("Select Exchange");
+        Typeface font = Typeface.createFromAsset(ctx.getAssets(), GlobalVariables.CUSTOMFONTNAME);
+        header.setTypeface(font);
         header.setTextSize(18);
         header.setGravity(Gravity.START);
         root.addView(header, new LinearLayout.LayoutParams(
@@ -77,7 +81,7 @@ public class WatchlistBottomSheet extends BottomSheetDialogFragment {
             intent.putExtra("ischeckshow", "2");
             intent.putExtra("exchangeName", items.get(pos).split("#:#")[1]);
             ctx.startActivity(intent);
-        });
+        }, ctx);
         rv.setAdapter(adapter);
 
         LinearLayout.LayoutParams rvParams = new LinearLayout.LayoutParams(

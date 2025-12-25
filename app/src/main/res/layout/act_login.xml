@@ -30,14 +30,13 @@
                     android:id="@+id/lay_logoname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/thirty"
+                    android:layout_marginTop="@dimen/fifty"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="wrap_content"
-                        android:layout_height="@dimen/twohundred"
-                        android:layout_centerVertical="true"
+                        android:layout_height="@dimen/hundred"
                         android:src="@drawable/logo_back" />
                 </LinearLayout>
 
@@ -45,6 +44,7 @@
                     android:id="@+id/layform"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sixty"
                     android:layout_below="@+id/lay_logoname"
                     android:layout_marginBottom="@dimen/ten"
                     android:orientation="vertical"

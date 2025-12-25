@@ -6,6 +6,7 @@ import static com.onlinetradeview.tv.cmonulty.apicalling.WebService.PRE_URL;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -17,6 +18,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -31,6 +33,7 @@ import com.android.volley.toolbox.Volley;
 import com.onlinetradeview.tv.act.ActLogin;
 import com.onlinetradeview.tv.act.ActSearchMetal;
 import com.onlinetradeview.tv.cmonulty.GlobalData;
+import com.onlinetradeview.tv.cmonulty.GlobalVariables;
 import com.onlinetradeview.tv.cmonulty.customviews.CustomeProgressDialog;
 import com.onlinetradeview.tv.act.ActMain;
 import com.onlinetradeview.tv.R;
@@ -139,6 +142,12 @@ public class FragCreateOrder extends Fragment implements OnClickListener, WebSer
         dataHighprice = aiView.findViewById(R.id.data_highprice);
         dataLowprice = aiView.findViewById(R.id.data_lowprice);
         dataChange = aiView.findViewById(R.id.data_change);
+
+        RelativeLayout lyt_parent = aiView.findViewById(R.id.lyt_parent);
+        if (!GlobalVariables.CUSTOMFONTNAME.equals("")) {
+            Typeface font = Typeface.createFromAsset(svContext.getAssets(), GlobalVariables.CUSTOMFONTNAME);
+            FontUtils.setThemeColor(lyt_parent, svContext, font);
+        }
 
         dataBuyers = aiView.findViewById(R.id.data_buyers);
         dataSellers = aiView.findViewById(R.id.data_sellers);

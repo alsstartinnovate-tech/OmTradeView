@@ -1,6 +1,7 @@
 package com.onlinetradeview.tv.adptr;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,8 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.onlinetradeview.tv.R;
+import com.onlinetradeview.tv.cmonulty.GlobalVariables;
+import com.onlinetradeview.tv.cmonulty.customfont.FontUtils;
 import com.onlinetradeview.tv.mdel.McxModel;
 import com.onlinetradeview.tv.cmonulty.recyclerview.ItemAnimation;
 
@@ -43,7 +46,7 @@ public class McxAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 ltptwo;
         public ImageView imgDrawable;
         public CardView cardView;
-        public View lyt_parent;
+        public ViewGroup lyt_parent;
 
         public OriginalViewHolder(View v) {
             super(v);
@@ -59,6 +62,10 @@ public class McxAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
             cardView = v.findViewById(R.id.cardview);
             lyt_parent = v.findViewById(R.id.lyt_parent);
+            if (!GlobalVariables.CUSTOMFONTNAME.equals("")) {
+                Typeface font = Typeface.createFromAsset(ctx.getAssets(), GlobalVariables.CUSTOMFONTNAME);
+                FontUtils.setThemeColor(lyt_parent, ctx, font);
+            }
         }
     }
 
