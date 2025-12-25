@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mylayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/include_connection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/twenty" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/twenty"
+                    android:padding="@dimen/thirtyfive"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/ten"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/lay_logoname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/twelve"
+                            android:layout_weight="1.5"
+                            android:text="Select Option"
+                            android:textColor="@color/slate_900"
+                            android:textSize="@dimen/ts_eighteen" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/twelve"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/market"
+                                android:layout_width="@dimen/seventyfive"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/back_textviewselected_left"
+                                android:gravity="center"
+                                android:text="Market"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/ts_fifteen" />
+
+                            <TextView
+                                android:id="@+id/order"
+                                android:layout_width="@dimen/seventyfive"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/market"
+                                android:background="@drawable/back_textviewunselected_center"
+                                android:gravity="center"
+                                android:text="Limit"
+                                android:textColor="@color/slate_900"
+                                android:textSize="@dimen/ts_fifteen" />
+
+                            <TextView
+                                android:id="@+id/sl"
+                                android:layout_width="@dimen/seventyfive"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/order"
+                                android:background="@drawable/back_textviewunselected_right"
+                                android:gravity="center"
+                                android:text="SL"
+                                android:textColor="@color/slate_900"
+                                android:textSize="@dimen/ts_fifteen" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvlot"
+                            android:layout_width="@dimen/threehundred"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/fifteen"
+                            android:gravity="center_horizontal"
+                            android:text="Enter the Lots you want to buy:"
+                            android:textColor="@color/slate_900"
+                            android:textSize="@dimen/ts_forteen" />
+
+                        <EditText
+                            android:id="@+id/tvlotnum"
+                            android:layout_width="@dimen/threehundred"
+                            android:layout_height="@dimen/forty"
+                            android:layout_marginTop="@dimen/five"
+                            android:background="@drawable/back_round"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:padding="@dimen/two"
+                            android:textColor="@color/slate_900"
+                            android:textSize="@dimen/seventeen" />
+
+                        <LinearLayout
+                            android:id="@+id/lay_order_future"
+                            android:layout_width="wrap_content"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvbidprice"
+                                android:layout_width="@dimen/threehundred"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/ten"
+                                android:gravity="center_horizontal"
+                                android:text="Enter the price you want to buy:"
+                                android:textColor="@color/slate_900"
+                                android:textSize="@dimen/ts_forteen" />
+
+                            <EditText
+                                android:id="@+id/tvbidpricelot"
+                                android:layout_width="@dimen/threehundred"
+                                android:layout_height="@dimen/forty"
+                                android:layout_marginTop="@dimen/seven"
+                                android:background="@drawable/back_round"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:padding="@dimen/two"
+                                android:textColor="@color/slate_900"
+                                android:textSize="@dimen/seventeen" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/thirtyfive"
+                            android:layout_marginRight="@dimen/thirtyfive"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/forty"
+                                android:layout_marginTop="@dimen/ts_fifteen"
+                                android:layout_marginRight="@dimen/five"
+                                android:layout_marginBottom="@dimen/twenty"
+                                android:layout_weight="1"
+                                android:background="@drawable/back_roundbtn"
+                                android:gravity="center"
+                                android:padding="@dimen/two"
+                                android:text="Buy"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/seventeen" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/forty"
+                                android:layout_marginLeft="@dimen/five"
+                                android:layout_marginTop="@dimen/ts_fifteen"
+                                android:layout_marginBottom="@dimen/twenty"
+                                android:layout_weight="1"
+                                android:background="@drawable/back_roundbtn"
+                                android:gravity="center"
+                                android:padding="@dimen/two"
+                                android:text="Sell"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/seventeen" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/fifteen"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:id="@+id/tvsell"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/red_800"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/five">
+
+                                <TextView
+                                    android:layout_width="@dimen/hundred"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Sell@"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/ts_fifteen" />
+
+                                <TextView
+                                    android:id="@+id/txt_sell"
+                                    android:layout_width="@dimen/hundred"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/ts_twenty" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tvbuy"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/green_800"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/five">
+
+                                <TextView
+                                    android:layout_width="@dimen/hundred"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Buy@"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/ts_fifteen" />
+
+                                <TextView
+                                    android:id="@+id/txt_buy"
+                                    android:layout_width="@dimen/hundred"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/ts_twenty" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:text="Last Price History"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ts_seventeen"
+                    android:visibility="invisible" />
+
+                <include
+                    layout="@layout/item_bidhistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ten" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ten"
+                    android:visibility="gone"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_bidhistory" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

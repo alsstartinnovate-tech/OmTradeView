@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources [<!ENTITY appname "OM"><!ENTITY package "com.startup.meonlinetrade">]>
+
+<resources>
+    <string name="app_name">&appname;</string>
+    <string name="currency_symbol">₹</string>
+
+    <string name="label_loading">Loading...</string>
+    <string name="label_comingsoon">Please come here later.\nSoon some craziness will be come here</string>
+    <string name="note_one"><b>No real money involved.</b> This is a virtual trading application which has all features to trade.</string>
+    <string name="note_two">This is application is use for exchanging view on market <b>for training purpose only.</b></string>
+    <string name="note_three"><b>OnlineMarketView is not liable for any real money transaction. We don\'t deal in any real money</b></string>
+
+    <string name="label_nodata">No Data to show</string>
+
+    <string name="nonterworkconn">No network connection. Connect to the \ninternet and try again</string>
+    <string name="nointernet">No Internet connection</string>
+    <string name="splashpromotedtext">Developed by: </string>
+    <string name="splashpromotedby">@string/app_name</string>
+
+    <string name="toolbar_editprofile">Profile</string>
+    <string name="toolbar_notification">Notification</string>
+
+    <string name="ls_login">Log In</string>
+    <string name="ls_forgotpwd">Forgot Password</string>
+
+    <string name="passcode_head">Please enter the passcode below</string>
+    <string name="passcode_btn_verify">VERIFY</string>
+    <string name="passcode_skip">Skip Passcode</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+</resources>

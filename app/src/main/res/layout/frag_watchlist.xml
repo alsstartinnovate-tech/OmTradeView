@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mylayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/tradesnames"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/lay_tabother"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <me.grantland.widget.AutofitTextView
+                        android:id="@+id/tv_others"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/five"
+                        android:singleLine="true"
+                        android:text="All Market"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/ts_fifteen" />
+
+                    <View
+                        android:id="@+id/indicator_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginStart="@dimen/twenty"
+                        android:layout_marginTop="@dimen/five"
+                        android:layout_marginEnd="@dimen/twenty"
+                        android:background="@drawable/back_viewpage_indicator"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_tabmcxfuture"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <me.grantland.widget.AutofitTextView
+                        android:id="@+id/tv_mcxfuture"
+                        android:layout_width="wrap_content"
+                        android:padding="@dimen/five"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="MCX FUTURES"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/ts_thirteen" />
+
+                    <View
+                        android:id="@+id/indicator_mcxfuture"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginStart="@dimen/twenty"
+                        android:layout_marginTop="@dimen/five"
+                        android:layout_marginEnd="@dimen/twenty"
+                        android:background="@color/teal_primary_light" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_tabnsefuture"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <me.grantland.widget.AutofitTextView
+                        android:id="@+id/tv_nsefuture"
+                        android:layout_width="wrap_content"
+                        android:padding="@dimen/five"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="NSE FUTURES"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/ts_fifteen" />
+
+                    <View
+                        android:id="@+id/indicator_nsefutures"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginStart="@dimen/twenty"
+                        android:layout_marginTop="@dimen/five"
+                        android:layout_marginEnd="@dimen/twenty"
+                        android:background="@drawable/back_viewpage_indicator"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/searchwatchlist"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/fortyfive"
+        android:layout_marginStart="@dimen/ten"
+        android:layout_marginTop="@dimen/five"
+        android:layout_marginEnd="@dimen/ten"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/teal_primary_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tradesnames">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/three">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/thirtyfive"
+                android:padding="@dimen/seven"
+                android:src="@drawable/search"
+                app:tint="@color/grey_600" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/five"
+                android:text="Search &amp; Add"
+                android:textColor="@color/teal_primary"
+                android:textSize="@dimen/ts_thirteen" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_lotterylist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/five"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/ten"
+        android:paddingTop="@dimen/five"
+        android:paddingRight="@dimen/ten"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchwatchlist"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_watchlist" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_comingsoon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_loading"
+        android:textColor="@color/slate_900"
+        android:textSize="@dimen/ts_twentyfive"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/forty"
+        android:layout_marginTop="@dimen/twentyfive"
+        android:background="@drawable/gradient_button_teal"
+        android:elevation="8dp"
+        android:text="Add Instrument"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_comingsoon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

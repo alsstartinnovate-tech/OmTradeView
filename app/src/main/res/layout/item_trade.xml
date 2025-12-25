@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyt_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/five">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="@dimen/ten"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/seven"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/lay_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:foregroundGravity="left"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tradernumb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/twentyfive"
+                        android:layout_marginLeft="@dimen/five"
+                        android:background="@drawable/back_round_green"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/seven"
+                        android:paddingRight="@dimen/seven"
+                        android:textColor="@color/green_400"
+                        android:textSize="@dimen/ts_twelve" />
+
+                    <TextView
+                        android:id="@+id/ordertype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/twentyfive"
+                        android:layout_marginStart="@dimen/five"
+                        android:background="@drawable/back_round_red"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:gravity="center"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:paddingLeft="@dimen/seven"
+                        android:paddingRight="@dimen/seven"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="@color/red_900"
+                        android:textSize="@dimen/ts_twelve" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:layout_marginRight="@dimen/five"
+                    android:paddingLeft="@dimen/five"
+                    android:textColor="@color/slate_900"
+                    android:textSize="@dimen/ts_fifteen" />
+
+                <TextView
+                    android:id="@+id/boughttrader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/five"
+                    android:textColor="@color/slate_900"
+                    android:textSize="@dimen/ts_twelve" />
+
+                <me.grantland.widget.AutofitTextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/five"
+                    android:singleLine="true"
+                    android:textColor="@color/slate_900"
+                    android:textSize="@dimen/ts_twelve" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_lotname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@+id/lay_name"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/three">
+
+                <TextView
+                    android:id="@+id/marketrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_marginTop="@dimen/two"
+                    android:layout_marginRight="@dimen/five"
+                    android:background="@drawable/back_round_green"
+                    android:paddingLeft="@dimen/seven"
+                    android:paddingRight="@dimen/seven"
+                    android:textColor="@color/green_400"
+                    android:textSize="@dimen/ts_seventeen" />
+
+                <TextView
+                    android:id="@+id/cancel_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:layout_marginRight="@dimen/two"
+                    android:background="@drawable/back_button_dark"
+                    android:backgroundTint="@color/red_900"
+                    android:paddingLeft="@dimen/five"
+                    android:paddingTop="@dimen/two"
+                    android:paddingRight="@dimen/five"
+                    android:paddingBottom="@dimen/two"
+                    android:text="Cancel Order"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ts_fifteen" />
+
+                <TextView
+                    android:id="@+id/marginused"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/three"
+                    android:layout_marginRight="@dimen/two"
+                    android:textColor="@color/slate_900"
+                    android:textSize="@dimen/ts_eleven" />
+
+                <TextView
+                    android:id="@+id/holding_marginrequest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/two"
+                    android:textColor="@color/slate_900"
+                    android:textSize="@dimen/ts_eleven" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/cardview"
+        android:background="@color/green_900" />
+</RelativeLayout>
+
+
+

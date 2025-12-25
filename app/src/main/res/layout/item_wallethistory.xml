@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyt_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/five"
+        android:visibility="visible"
+        app:cardBackgroundColor="@color/material_black"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/ten">
+
+            <RelativeLayout
+                android:id="@+id/lay_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/lay_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/thirty"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/currency_symbol"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ts_twenty" />
+
+                    <TextView
+                        android:id="@+id/vm_memberid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/five"
+                        android:gravity="center"
+                        android:text="1000"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ts_twenty" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_toLeftOf="@+id/lay_amount"
+                    android:maxLines="1"
+                    android:text="asdfsadf"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/rechargedesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/username"
+                    android:layout_toLeftOf="@+id/lay_amount"
+                    android:maxLines="3"
+                    android:text="asdfsadf"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/beforepoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rechargedesc"
+                    android:layout_toLeftOf="@+id/lay_amount"
+                    android:maxLines="3"
+                    android:text="asdfsadf"
+                    android:textColor="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/afterpopint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/beforepoint"
+                    android:layout_toLeftOf="@+id/lay_amount"
+                    android:maxLines="3"
+                    android:text="asdfsadf"
+                    android:textColor="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/vm_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lay_amount"
+                    android:layout_alignParentRight="true"
+                    android:text="datetime"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+
+

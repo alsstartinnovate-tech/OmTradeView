@@ -1,0 +1,37 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.13.2'
+        classpath 'com.google.gms:google-services:4.4.4'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:3.0.6'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+ext {
+    configuration = [
+            package          : "com.ommarketview",
+            compileSdkVersion: 35,
+            targetSdkVersion : 35,
+            minSdkVersion    : 23,
+            versionCode      : 1,
+            versionName      : "1.0",
+            buildToolsVersion: "35.0.0"
+    ]
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}

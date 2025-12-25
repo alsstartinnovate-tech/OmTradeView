@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/gradient_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/include_connection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#3c3c3c"
+            android:padding="@dimen/twenty" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/lay_logoname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/thirty"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/twohundred"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/logo_back" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layform"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lay_logoname"
+                    android:layout_marginBottom="@dimen/ten"
+                    android:orientation="vertical"
+                    android:padding="@dimen/twenty">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginTop="@dimen/ten"
+                        android:layout_marginRight="@dimen/five"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/fifteen"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/teal_primary_light"
+                        app:strokeWidth="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/back_edittext_light"
+                            android:orientation="vertical"
+                            android:padding="@dimen/five">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:paddingStart="@dimen/seven"
+                                android:paddingEnd="@dimen/seven"
+                                android:text="User Id"
+                                android:textColor="@color/c_gray2"
+                                android:textSize="@dimen/ts_twelve" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ed_username"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/edittext_height"
+                                android:layout_marginTop="@dimen/two"
+                                android:background="@color/transparent"
+                                android:hint="Enter Your user id"
+                                android:inputType="text"
+                                android:paddingStart="@dimen/seven"
+                                android:paddingEnd="@dimen/seven"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textCursorDrawable="@null"
+                                android:textSize="@dimen/ts_forteen" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/five"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/edittext_height"
+                                    android:layout_marginTop="@dimen/two"
+                                    android:background="@drawable/back_edittext_light"
+                                    android:inputType="number"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/fontcolorlight"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/ts_fifteen"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginTop="@dimen/twenty"
+                        android:layout_marginRight="@dimen/five"
+                        app:cardBackgroundColor="@color/colorAccent"
+                        app:cardCornerRadius="@dimen/fifteen"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/back_edittext_light"
+                            android:orientation="vertical"
+                            android:padding="@dimen/five">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:text="Password"
+                                android:textColor="@color/buttoncolor"
+                                android:textSize="@dimen/ts_twelve" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ed_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/edittext_height"
+                                android:layout_marginTop="@dimen/two"
+                                android:background="@color/transparent"
+                                android:hint="Enter Your password"
+                                android:inputType="textPassword"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textCursorDrawable="@null"
+                                android:textSize="@dimen/ts_forteen" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fortyfive"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginTop="@dimen/thirtyfive"
+                        android:layout_marginRight="@dimen/five"
+                        android:background="@drawable/gradient_button_teal"
+                        android:elevation="10dp"
+                        android:text="@string/ls_login"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginTop="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/five"
+                        android:gravity="left|end"
+                        android:text="@string/note_one"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/ts_twelve"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginTop="@dimen/ten"
+                        android:layout_marginRight="@dimen/five"
+                        android:gravity="left|end"
+                        android:text="@string/note_two"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/ts_twelve"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginTop="@dimen/ten"
+                        android:layout_marginRight="@dimen/five"
+                        android:gravity="left|end"
+                        android:text="@string/note_three"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/ts_twelve"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/txt_forgtpwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/twenty"
+                        android:gravity="center"
+                        android:text="@string/ls_forgotpwd"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ts_seventeen"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/seven" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

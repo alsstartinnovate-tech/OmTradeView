@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "805539879858",
+    "project_id": "meonlinetrade-38bce",
+    "storage_bucket": "meonlinetrade-38bce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805539879858:android:429f72bc5b3c9244f862ab",
+        "android_client_info": {
+          "package_name": "com.ommarketview.om"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "805539879858-faqo2uro252bneh0po4ig32rl6v792m5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUT_s87esrzG_qAgp2kI9bdjIDVudwGK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "805539879858-faqo2uro252bneh0po4ig32rl6v792m5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

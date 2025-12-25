@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mylayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/layrefrsh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/seven"
+                android:orientation="horizontal"
+                android:padding="@dimen/three"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/lay_tabmcxfuture"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/two">
+
+                    <TextView
+                        android:id="@+id/tv_mcxfuture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Pending"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/ts_fifteen" />
+
+                    <View
+                        android:id="@+id/indicator_mcxfuture"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginStart="@dimen/thirty"
+                        android:layout_marginTop="@dimen/five"
+                        android:layout_marginEnd="@dimen/thirty"
+                        android:background="@drawable/back_viewpage_indicator" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_tabnsefuture"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/two">
+
+                    <TextView
+                        android:id="@+id/tv_nsefuture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Active"
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/ts_fifteen" />
+
+                    <View
+                        android:id="@+id/indicator_nsefutures"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginStart="@dimen/thirty"
+                        android:layout_marginTop="@dimen/five"
+                        android:layout_marginEnd="@dimen/thirty"
+                        android:background="@drawable/back_viewpage_indicator"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_tabother"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/two">
+
+                    <TextView
+                        android:id="@+id/tv_others"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="Close"
+                        android:textColor="@color/red_800"
+                        android:textSize="@dimen/ts_fifteen" />
+
+                    <View
+                        android:id="@+id/indicator_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginStart="@dimen/thirty"
+                        android:layout_marginTop="@dimen/five"
+                        android:layout_marginEnd="@dimen/thirty"
+                        android:background="@drawable/back_viewpage_indicator"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_cancelpendingorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/seven"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/two">
+
+                <TextView
+                    android:id="@+id/cancelall_mcxpending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/thirty"
+                    android:layout_marginStart="@dimen/five"
+                    android:background="@drawable/back_button_dark"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/seven"
+                    android:backgroundTint="@color/red_900"
+                    android:paddingRight="@dimen/seven"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="Cancel All Pending MCX Orders"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ts_twelve" />
+
+                <TextView
+                    android:id="@+id/cancelall_nsepending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/thirty"
+                    android:layout_marginStart="@dimen/five"
+                    android:background="@drawable/back_button_dark"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:gravity="center"
+                    android:backgroundTint="@color/red_900"
+                    android:paddingLeft="@dimen/seven"
+                    android:paddingRight="@dimen/seven"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="Cancel All Pending NSE Orders"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ts_twelve" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_cancelorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/seven"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/two">
+
+                <TextView
+                    android:id="@+id/cancelall_mcx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/thirty"
+                    android:layout_marginStart="@dimen/five"
+                    android:background="@drawable/back_button_dark"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/seven"
+                    android:backgroundTint="@color/red_900"
+                    android:paddingRight="@dimen/seven"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="Close All MCX Orders"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ts_twelve" />
+
+                <TextView
+                    android:id="@+id/cancelall_nse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/thirty"
+                    android:layout_marginStart="@dimen/five"
+                    android:background="@drawable/back_button_dark"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:gravity="center"
+                    android:backgroundTint="@color/red_900"
+                    android:paddingLeft="@dimen/seven"
+                    android:paddingRight="@dimen/seven"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="Close All NSE Orders"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ts_twelve" />
+
+            </LinearLayout>
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedscrollview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_markettrade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/ten"
+                    android:paddingRight="@dimen/ten"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_trade" />
+            </androidx.core.widget.NestedScrollView>
+
+            <TextView
+                android:id="@+id/txt_showerror"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fifty"
+                android:gravity="center"
+                android:padding="@dimen/forty"
+                android:text="@string/label_loading"
+                android:textColor="@color/slate_900"
+                android:textSize="@dimen/ts_twentyfive"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

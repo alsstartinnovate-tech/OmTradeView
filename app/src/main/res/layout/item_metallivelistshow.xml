@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyt_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/two"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="@dimen/ten"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/two"
+            android:weightSum="2.5">
+
+            <LinearLayout
+                android:id="@+id/lay_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/lay_lotname"
+                android:foregroundGravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/two">
+
+                <TextView
+                    android:id="@+id/tvname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/three"
+                    android:layout_weight="1.5"
+                    android:text="Garib Rath"
+                    android:textColor="@color/slate_900"
+                    android:textSize="@dimen/ts_fifteen" />
+
+                <TextView
+                    android:id="@+id/tvexpiry_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/three"
+                    android:layout_weight="1.5"
+                    android:text="Expiry Date"
+                    android:textColor="@color/slate_900"
+                    android:textSize="@dimen/ts_twelve" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_lotname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/seven"
+                android:layout_toLeftOf="@+id/lay_checkbox"
+                android:orientation="horizontal"
+                android:padding="@dimen/two">
+
+                <me.grantland.widget.AutofitTextView
+                    android:id="@+id/lastprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/four"
+                    android:gravity="center"
+                    android:maxWidth="@dimen/hundred"
+                    android:text="Last Price"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ts_twenty"
+                    android:visibility="gone" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_buy"
+                    android:layout_width="@dimen/seventyfive"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/five"
+                    android:clickable="false"
+                    app:cardBackgroundColor="@color/transparent"
+                    app:cardCornerRadius="@dimen/three"
+                    app:cardElevation="0dp">
+
+                    <me.grantland.widget.AutofitTextView
+                        android:id="@+id/txt_buy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/four"
+                        android:gravity="center"
+                        android:padding="@dimen/two"
+                        android:maxWidth="@dimen/hundred"
+                        android:clickable="false"
+                        android:text="Buy"
+                        android:textColor="@color/slate_900"
+                        android:textSize="@dimen/ts_seventeen" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_sell"
+                    android:layout_width="@dimen/seventyfive"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/five"
+                    android:clickable="false"
+                    app:cardBackgroundColor="@color/transparent"
+                    app:cardCornerRadius="@dimen/three"
+                    app:cardElevation="0dp">
+
+                    <me.grantland.widget.AutofitTextView
+                        android:id="@+id/txt_sell"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Sell"
+                        android:clickable="false"
+                        android:padding="@dimen/two"
+                        android:textColor="@color/slate_900"
+                        android:textSize="@dimen/ts_seventeen" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:padding="@dimen/twelve">
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="@dimen/thirty"
+                    android:layout_height="@dimen/thirty"
+                    android:background="@drawable/chkbox_back"
+                    android:button="@color/transparent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/two"
+                android:orientation="horizontal"
+                android:layout_below="@+id/lay_name"
+                android:paddingLeft="@dimen/two"
+                android:paddingRight="@dimen/two"
+                android:weightSum="4">
+
+                <me.grantland.widget.AutofitTextView
+                    android:id="@+id/tvotherprice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Lot :"
+                    android:textColor="@color/slate_900"
+                    android:textSize="@dimen/ts_eleven" />
+
+                <me.grantland.widget.AutofitTextView
+                    android:id="@+id/txt_high"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/two"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="High : "
+                    android:textColor="@color/slate_900"
+                    android:textSize="@dimen/ts_eleven" />
+
+                <me.grantland.widget.AutofitTextView
+                    android:id="@+id/txt_low"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/two"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Low : "
+                    android:textColor="@color/slate_900"
+                    android:textSize="@dimen/ts_eleven" />
+
+                <me.grantland.widget.AutofitTextView
+                    android:id="@+id/txt_lastprice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/five"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Ltp : "
+                    android:textColor="@color/slate_900"
+                    android:textSize="@dimen/ts_eleven" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/cardview"
+        android:background="@color/green_900" />
+</RelativeLayout>
+
+
+
